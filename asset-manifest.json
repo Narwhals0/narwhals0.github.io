@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//narwhals0.github.io/static/css/main.4f0b3ec6.css",
+    "main.js": "//narwhals0.github.io/static/js/main.5e964045.js",
+    "static/js/453.ad6eb26e.chunk.js": "//narwhals0.github.io/static/js/453.ad6eb26e.chunk.js",
+    "index.html": "//narwhals0.github.io/index.html",
+    "main.4f0b3ec6.css.map": "//narwhals0.github.io/static/css/main.4f0b3ec6.css.map",
+    "main.5e964045.js.map": "//narwhals0.github.io/static/js/main.5e964045.js.map",
+    "453.ad6eb26e.chunk.js.map": "//narwhals0.github.io/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f0b3ec6.css",
+    "static/js/main.5e964045.js"
+  ]
+}
