@@ -1,0 +1,76 @@
+/* src/components/Hero.css */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff00; /* Light, clean background color */
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  color: #333333; /* Darker, neutral text color for better contrast */
+  padding: 20px; /* Space around the content for small screens */
+}
+
+.home-card {
+  background-color: rgb(255, 255, 255); /* Soft, semi-transparent white for the card background */
+  padding: 50px; /* Increased padding for more spaciousness */
+  border-radius: 24px; /* Larger radius for a softer feel */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Softer, more subtle shadow */
+  max-width: 700px; /* Slightly larger width for a more luxurious look */
+  text-align: center; /* Keep text centered */
+  backdrop-filter: blur(10px); /* Add a slight blur effect for a more modern, Apple-like look */
+}
+
+.home h1 {
+  font-size: 3rem; /* Large title for an impactful introduction */
+  font-weight: 600; /* Semi-bold for subtle emphasis */
+  margin-bottom: 40px; /* Space below title */
+  margin-top: 10px;
+  color: #007aff; /* Apple-like accent color */
+}
+
+.home p {
+  font-size: 1.25rem; /* Larger text for improved readability */
+  margin: 20px 0; /* Vertical spacing around the paragraph */
+  line-height: 1.8; /* More line height for an airy look */
+  color: #333333; /* Neutral text color */
+}
+
+.cta-button {
+  display: inline-block;
+    padding: 10px 20px; /* Compact button */
+    font-size: 0.9rem; /* Slightly smaller font */
+    color: #ffffff; /* Text color */
+    background-color: #2e2e2e; /* Subtle translucent background */
+    text-decoration: none; /* No underline */
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid rgba(118, 115, 115, 0.3); /* Soft translucent border */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cta-button:hover {
+  background-color: #5d5c5c; /* Slight color change on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Lift effect on hover */
+}
+
+@media (max-width: 768px) {
+  .home-card {
+    padding: 40px; /* Reduce padding for smaller screens */
+  }
+
+  .home h1 {
+    font-size: 2.5rem; /* Reduce title size for smaller screens */
+  }
+
+  .home p {
+    font-size: 1.125rem; /* Adjust paragraph font size */
+  }
+
+  .cta-button {
+    font-size: 0.9rem; /* Adjust button text size */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+}

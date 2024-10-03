@@ -1,0 +1,109 @@
+/* src/components/Projects.css */
+
+.projects {
+    padding: 100px 20px; /* Add more vertical space for overall section */
+    background-color: rgba(255, 255, 255, 0); /* Keep it transparent for a clean look */
+    color: #333333; /* Neutral dark color for text */
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+.projects-card {
+    background-color: #ffffff; /* Soft white for the card */
+    padding: 40px; /* Padding for a spacious feel */
+    border-radius: 20px; /* Rounded corners for softness */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto; /* Center the card */
+    max-width: 1200px; /* Limit the width of the card */
+}
+
+.projects h1 {
+    font-size: 3rem; /* Large title for impact */
+    margin-bottom: 20px; /* Space below title */
+    font-weight: 600; /* Semi-bold for emphasis */
+    color: #007aff; /* Apple-like accent color */
+}
+
+.projects p {
+    font-size: 1.2rem; /* Larger font size for description */
+    margin-bottom: 40px; /* Space below paragraph */
+    color: #555555; /* Softer gray for readability */
+}
+
+.project-list {
+    display: grid; /* Grid layout for project cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 40px; /* Space between cards */
+}
+
+.project-card {
+    background-color: #2e2e2e; /* Dark gray for a twilight effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 30px; /* Spacious feel */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Darker, subtle shadow */
+    transition: transform 0.2s; /* Smooth transition */
+    text-align: left; /* Align text to the left */
+}
+
+.project-card h2 {
+    font-size: 1.5rem; /* Card title size */
+    margin-bottom: 15px; /* Space below title */
+    font-weight: 500; /* Medium weight */
+    color: #ffffff; /* Apple-like blue accent */
+}
+
+.project-card p {
+    font-size: 1rem; /* Card description size */
+    margin-bottom: 25px; /* Space below paragraph */
+    color: #d3d3d3; /* Light gray for better contrast on dark background */
+}
+
+.project-card .cta-button {
+    display: inline-block;
+    padding: 10px 20px; /* Compact button */
+    font-size: 0.9rem; /* Slightly smaller font */
+    color: #2e2e2e; /* Dark background for button text */
+    background-color: #ffffff; /* White background for button */
+    text-decoration: none; /* No underline */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.project-card .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* More visible background on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .projects h1 {
+        font-size: 2.5rem; /* Smaller title for mobile */
+    }
+
+    .projects-card {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .project-card {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .project-card h2 {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .project-card p {
+        font-size: 0.95rem; /* Adjust font size for smaller screens */
+    }
+
+    .cta-button {
+        font-size: 0.9rem; /* Adjust button text size for mobile */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}

@@ -1,0 +1,69 @@
+.about {
+    padding: 60px 30px; /* Adequate padding for breathing space */
+    max-width: 800px; /* Limiting width for readability */
+    margin: 150px auto; /* Center align the content with space from the header */
+    background-color: rgb(255, 255, 255); /* Light, semi-transparent background for a modern look */
+    color: #333333; /* Dark text for better contrast */
+    border-radius: 16px; /* Increased border radius for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+  }
+  
+  .about h1 {
+    font-size: 2.5rem; /* Larger font size for the main title */
+    margin-bottom: 40px; /* Space below title */
+    margin-top: 5px;
+    font-weight: 700; /* Bold for emphasis */
+    text-align: center; /* Center align the title */
+    color: #007AFF; /* macOS-like accent color */
+  }
+  
+  .about h2 {
+    font-size: 1.75rem; /* Slightly larger for subheadings */
+    margin-top: 40px; /* Space above subheading */
+    margin-bottom: 10px; /* Space below subheading */
+    font-weight: 600; /* Medium weight */
+    text-align: left; /* Left align the subheading */
+    color: #333333; /* Dark color for consistency */
+  }
+  
+  .about p {
+    font-size: 1.125rem; /* Slightly larger font size for paragraphs */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 15px; /* Space below paragraph */
+    text-align: left; /* Left align text */
+  }
+  
+  .about p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+  }
+  
+  /* Additional styles for a more airy design */
+  .about {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  .about:hover {
+    background-color: rgba(255, 255, 255, 1); /* Brighter background on hover for interactivity */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover for depth */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about {
+      padding: 40px 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .about h1 {
+      font-size: 2rem; /* Adjust main title size for smaller screens */
+    }
+  
+    .about h2 {
+      font-size: 1.5rem; /* Adjust subheading size for smaller screens */
+    }
+  
+    .about p {
+      font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+  }
+  

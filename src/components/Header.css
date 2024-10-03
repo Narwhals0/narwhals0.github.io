@@ -1,0 +1,161 @@
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px; /* Clean padding */
+  background-color: rgb(255, 255, 255); /* Lighter transparency for a subtle background */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  box-sizing: border-box;
+  backdrop-filter: blur(12px); /* Stronger blur for a frosted glass effect */
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Added font-family */
+}
+
+.header:hover {
+  background-color: rgb(255, 255, 255); /* Darker background on hover */
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 1.8rem; /* Slightly smaller, understated size */
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.5px; /* Tighter spacing */
+  transition: color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #009dff; /* Subtle color change on hover */
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex; /* Default to horizontal layout */
+  list-style: none;
+  gap: 25px; /* Balanced spacing between links */
+  opacity: 1; /* Ensure links are visible */
+}
+
+.nav-links li a {
+  color: rgb(0, 0, 0); /* Ensure this contrasts with the background */
+  text-decoration: none;
+  font-size: 1.1rem; /* Clean, minimal font size */
+  padding: 10px 15px;
+  position: relative;
+  font-weight: 500; /* Medium weight for clarity */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.nav-links li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #61dafb;
+  position: absolute;
+  bottom: -4px; /* Positioned just below the text */
+  left: 0;
+  transition: width 0.3s ease; /* Underline grows smoothly */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* Full-width underline on hover */
+}
+
+.nav-links li a:hover {
+  color: #009dff; /* Change link color on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Hamburger Menu for Mobile Screens */
+.hamburger {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 18px; /* Smaller, sleeker dimensions */
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.bar {
+  height: 2px; /* Thinner bars */
+  width: 100%;
+  background-color: black; /* Change to black for visibility */
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(40, 44, 52, 0.95); /* Dark background for mobile */
+    height: 100vh;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 1; /* Ensure opacity is set to 1 */
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Slide into view */
+    opacity: 1; /* Fade in */
+  }
+
+  .nav-links li {
+    margin: 20px 0; /* Spacing between items */
+  }
+
+  .nav-links li a {
+    font-size: 1.4rem; /* Slightly larger for mobile readability */
+    color: white; /* Ensure text is visible on dark background */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+    margin-right: 20px;
+  }
+
+  .header {
+    padding: 20px; /* Adjusted padding for mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hide hamburger on larger screens */
+  }
+}
