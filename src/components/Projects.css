@@ -1,5 +1,6 @@
 /* src/components/Projects.css */
 
+/* Default Styles (Light Mode) */
 .projects {
     padding: 100px 20px; /* Add more vertical space for overall section */
     background-color: rgba(255, 255, 255, 0); /* Keep it transparent for a clean look */
@@ -78,6 +79,40 @@
 
 .project-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Dark Mode Styles */
+.dark-mode .projects {
+    color: #e0e0e0; /* Light text color for dark mode */
+}
+
+.dark-mode .projects-card {
+    background-color: #333; /* Dark background for the card */
+}
+
+.dark-mode .projects h1 {
+    color: #61dafb /* Keep the accent color consistent */
+}
+
+.dark-mode .projects p {
+    color: #cccccc; /* Softer gray for readability in dark mode */
+}
+
+.dark-mode .project-card {
+    background-color: #454444; /* Darker gray for project cards */
+}
+
+.dark-mode .project-card h2 {
+    color: #ffffff; /* White for card titles */
+}
+
+.dark-mode .project-card p {
+    color: #e0e0e0; /* Light gray for descriptions */
+}
+
+.dark-mode .project-card .cta-button {
+    color: #413e3e; /* Dark background for button text */
+    background-color: #ffffff; /* White background for button */
 }
 
 /* Mobile responsiveness */

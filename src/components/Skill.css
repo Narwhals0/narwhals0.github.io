@@ -1,0 +1,111 @@
+.skills {
+    padding: 60px 30px; /* Adequate padding for breathing space */
+    max-width: 800px; /* Limiting width for readability */
+    margin: 150px auto; /* Center align the content with space from the header */
+    background-color: rgb(255, 255, 255); /* Light background for modern look */
+    color: #f7f7f7; /* Dark text for better contrast */
+    border-radius: 16px; /* Increased border radius for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.skills h1 {
+    font-size: 2.5rem; /* Larger font size for the main title */
+    margin-bottom: 40px; /* Space below title */
+    margin-top: 5px;
+    font-weight: 700; /* Bold for emphasis */
+    text-align: center; /* Center align the title */
+    color: #007AFF; /* macOS-like accent color */
+}
+
+.skills-list {
+    display: flex; /* Flexbox for aligning skill cards */
+    flex-wrap: wrap; /* Allow wrapping of skill cards */
+    gap: 20px; /* Space between skill cards */
+    justify-content: center; /* Center the skill cards */
+    margin: 0; /* Remove left margin for better alignment */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.skill-card {
+    background-color: #2e2e2e; /* Light background for skill cards */
+    border-radius: 12px; /* Rounded corners for skill cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Inner padding for content */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition effects */
+    flex: 1 1 200px; /* Flexible width for skill cards */
+    min-width: 250px; /* Minimum width for smaller screens */
+    max-width: 100%; /* Ensure cards don't overflow */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.skill-card h2 {
+    font-size: 1.75rem; /* Slightly larger for subheadings */
+    margin-top: 0; /* Remove top margin for a better look */
+    margin-bottom: 15px; /* Space below subheading */
+    font-weight: 600; /* Medium weight */
+    color: #ffffff; /* Dark color for consistency */
+}
+
+.skill-card li {
+    font-size: 1.125rem; /* Slightly larger font size for list items */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 10px; /* Space below list items */
+}
+
+.skill-card:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for depth */
+}
+
+/* Dark Mode Styles */
+.dark-mode .skills {
+    background-color: #333; /* Dark background for dark mode */
+    color: rgb(255, 255, 255); /* Light text for better contrast in dark mode */
+}
+
+.dark-mode .skills h1,
+.dark-mode .skills h2 {
+    color: #61dafb; /* Lighter color for headings in dark mode */
+}
+
+.dark-mode .skill-card {
+    background-color: #444; /* Darker background for skill cards */
+    color: rgb(255, 255, 255); /* Light text for skill cards in dark mode */
+}
+
+.dark-mode .skill-card:hover {
+    background-color: #555; /* Lighter background on hover for dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills {
+        padding: 40px 20px; /* Reduce padding on smaller screens */
+    }
+
+    .skills h1 {
+        font-size: 2rem; /* Adjust main title size for smaller screens */
+    }
+
+    .skills-list {
+        flex-direction: column; /* Stack skill cards vertically on small screens */
+        align-items: center; /* Center align skill cards */
+    }
+
+    .skill-card {
+        width: 100%; /* Full width for skill cards */
+        max-width: 100%; /* Ensure cards don't overflow */
+        margin: 0 0 20px; /* Space below each card */
+    }
+
+    .skill-card h2 {
+        font-size: 1.5rem; /* Adjust subheading size for smaller screens */
+    }
+
+    .skill-card li {
+        font-size: 1rem; /* Adjust list item size for smaller screens */
+    }
+}

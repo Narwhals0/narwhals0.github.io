@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px; /* Clean padding */
-  background-color: rgb(255, 255, 255); /* Lighter transparency for a subtle background */
+  padding: 16px 20px; /* Adjusted padding for a more compact header */
+  background-color: rgb(255, 255, 255); /* Light background for light mode */
   position: fixed;
   width: 100%;
   top: 0;
@@ -12,21 +12,26 @@
   color: rgb(0, 0, 0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
   box-sizing: border-box;
-  backdrop-filter: blur(12px); /* Stronger blur for a frosted glass effect */
-  transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* Added font-family */
+  backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
-.header:hover {
-  background-color: rgb(255, 255, 255); /* Darker background on hover */
+
+/* Dark Mode Styles */
+.dark-mode .header {
+  background-color: #333; /* Dark background for dark mode */
+  color: rgb(255, 255, 255); /* Light text for dark mode */
 }
+
+
 
 /* Logo Styles */
 .logo {
-  font-size: 1.8rem; /* Slightly smaller, understated size */
+  font-size: 1.6rem; /* Adjusted for a slightly smaller logo */
   font-weight: 600;
   color: rgb(0, 0, 0);
-  letter-spacing: 0.5px; /* Tighter spacing */
+  letter-spacing: 0.5px;
   transition: color 0.3s ease;
   cursor: pointer;
   text-decoration: none;
@@ -36,27 +41,36 @@
   color: #009dff; /* Subtle color change on hover */
 }
 
-/* Navigation Styles */
-nav {
-  display: flex;
-  align-items: center;
+.dark-mode .logo {
+  color: rgb(255, 255, 255); /* Light logo text in dark mode */
 }
 
+.dark-mode .logo:hover {
+  color: #61dafb; /* Brighter hover effect in dark mode */
+}
+
+/* Navigation and Toggle Container */
+.nav-and-toggle {
+  display: flex;
+  align-items: center; /* Ensure nav links and toggle are vertically aligned */
+}
+
+/* Navigation Styles */
 .nav-links {
-  display: flex; /* Default to horizontal layout */
+  display: flex;
   list-style: none;
-  gap: 25px; /* Balanced spacing between links */
-  opacity: 1; /* Ensure links are visible */
+  gap: 20px; /* Adjusted gap for more compact spacing */
+  opacity: 1;
 }
 
 .nav-links li a {
-  color: rgb(0, 0, 0); /* Ensure this contrasts with the background */
+  color: rgb(0, 0, 0); /* Dark text for light mode */
   text-decoration: none;
-  font-size: 1.1rem; /* Clean, minimal font size */
-  padding: 10px 15px;
+  font-size: 1rem; /* Slightly smaller font size */
+  padding: 8px 12px; /* Reduced padding for compactness */
   position: relative;
-  font-weight: 500; /* Medium weight for clarity */
-  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a::after {
@@ -65,37 +79,63 @@ nav {
   height: 2px;
   background: #61dafb;
   position: absolute;
-  bottom: -4px; /* Positioned just below the text */
+  bottom: -4px;
   left: 0;
-  transition: width 0.3s ease; /* Underline grows smoothly */
+  transition: width 0.3s ease;
 }
 
 .nav-links li a:hover::after {
-  width: 100%; /* Full-width underline on hover */
+  width: 100%;
 }
 
 .nav-links li a:hover {
-  color: #009dff; /* Change link color on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
+  color: #009dff;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode - Nav Links */
+.dark-mode .nav-links li a {
+  color: rgb(255, 255, 255); /* Light text for dark mode */
+}
+
+.dark-mode .nav-links li a:hover {
+  color: #61dafb; /* Brighter hover color in dark mode */
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+  margin-left: 20px; /* Space between nav links and toggle */
+  display: flex;
+  align-items: center; /* Vertically center the toggle */
+}
+
+.theme-toggle .react-switch {
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 /* Hamburger Menu for Mobile Screens */
 .hamburger {
-  display: none; /* Initially hidden */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 18px; /* Smaller, sleeker dimensions */
+  width: 24px; /* Smaller width */
+  height: 18px; /* Smaller height */
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .bar {
-  height: 2px; /* Thinner bars */
+  height: 2px; /* Slightly thinner bars */
   width: 100%;
   background-color: black; /* Change to black for visibility */
   border-radius: 5px;
   transition: 0.3s;
+}
+
+/* Dark Mode - Hamburger */
+.dark-mode .bar {
+  background-color: white; /* White bars in dark mode */
 }
 
 .hamburger.open .bar:nth-child(1) {
@@ -116,46 +156,61 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(40, 44, 52, 0.95); /* Dark background for mobile */
+    background-color: rgba(248, 247, 247, 0.95); /* Default light background for mobile */
     height: 100vh;
-    width: 100%;
-    max-width: 280px;
+    width: 180px; /* Reduced width for a more compact look */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateX(100%); /* Initially off-screen */
+    transform: translateX(100%); /* Slide out by default */
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    opacity: 1; /* Ensure opacity is set to 1 */
+    opacity: 1;
     z-index: 1000;
+    border-top-left-radius: 20px; /* Rounded top left corner */
+    border-bottom-left-radius: 20px; /* Rounded bottom left corner */
   }
 
   .nav-links.active {
     transform: translateX(0); /* Slide into view */
-    opacity: 1; /* Fade in */
+    opacity: 1;
   }
 
   .nav-links li {
-    margin: 20px 0; /* Spacing between items */
+    margin: 20px 0;
   }
 
   .nav-links li a {
-    font-size: 1.4rem; /* Slightly larger for mobile readability */
-    color: white; /* Ensure text is visible on dark background */
+    font-size: 1.2rem; /* Adjusted for mobile */
+    color: #333; /* Default text color for light mode */
+    padding: 10px 20px; /* Add padding for clickable area */
+    border-radius: 10px; /* Rounded corners for nav links */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+
+  .nav-links li a:hover {
+    background-color: rgba(0, 122, 255, 0.1); /* Subtle blue background change on hover for light mode */
+  }
+
+  .nav-links.dark-mode {
+    background-color: rgba(40, 44, 52, 0.95); /* Dark background for dark mode */
+  }
+
+  .nav-links.dark-mode li a {
+    color: #ffffff; /* Light text color for dark mode */
+  }
+
+  .nav-links.dark-mode li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background change on hover for dark mode */
   }
 
   .hamburger {
-    display: flex; /* Show hamburger on mobile */
-    margin-right: 20px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
   }
 
   .header {
-    padding: 20px; /* Adjusted padding for mobile */
-  }
-}
-
-@media (min-width: 769px) {
-  .hamburger {
-    display: none; /* Hide hamburger on larger screens */
+    padding: 10px 20px; /* Adjusted padding for mobile */
   }
 }

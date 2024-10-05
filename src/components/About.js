@@ -8,7 +8,13 @@ function About() {
     to: { opacity: 1, transform: 'scale(1)' }, // Target properties
     from: { opacity: 0, transform: 'scale(0.8)' }, // Start properties
     config: { tension: 200, friction: 15 }, // Adjust tension and friction for animation speed
+    
   });
+
+  const toTop = () => {
+    window.scrollTo(0, 0);
+  };
+
 
   return (
     <animated.section className="about" id="about" style={springProps}>
@@ -32,10 +38,14 @@ function About() {
       </p>
       <h2>Skills Development</h2>
       <p>
-        I am learning cloud computing and AWS at university and am also taking courses in 
-        Cloud Computing Foundations, Machine Learning, Data Engineering, Cloud Architecture, and Cloud Security & Governance.
+        I'm learning cloud computing and AWS at university and also taking courses in 
+        AWS Cloud Computing Foundations, AWS Machine Learning, AWS Data Engineering, AWS Cloud Architecture, and Cloud Security & Governance.
       </p>
+      {toTop()}
     </animated.section>
+   
+    
+    
   );
 }
 

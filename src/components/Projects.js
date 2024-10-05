@@ -6,9 +6,9 @@ import "./Projects.css";
 const projectsData = [
   {
     title: "ISLAB Recruitment",
-    description: "Involved as a team to create a platform for managing and applying recruitment.",
+    description: "Involved as a team to create a platform for managing and applying recruitment using laravel framework.",
     link: "https://islab.apps.binus.ac.id/recruitmentislab/",
-  },
+  }/*,
   {
     title: "Project Two",
     description: "Description for project two.",
@@ -18,20 +18,22 @@ const projectsData = [
     title: "Project Three",
     description: "Description for project three.",
     link: "#", // Replace with actual link
-  },
+  },*/
 ];
+
+
 
 function Projects() {
   // Define the spring animation for the project cards
   const springProps = useSpring({
-    from: { opacity: 0, transform: "translateY(20px) scale(0.95)" },
-    to: { opacity: 1, transform: "translateY(0) scale(1)" },
-    config: { tension: 250, friction: 20, clamp: true },
+    to: { opacity: 1, transform: 'scale(1)' }, // Final state
+    from: { opacity: 0, transform: 'scale(0.8)' }, // Initial state
+    config: { tension: 200, friction: 15 }, // Animation configuration
   });
 
   return (
     <section className="projects" id="projects">
-      <div className="projects-card">
+      <animated.div className="projects-card" style={springProps}>
         <h1>Projects</h1>
         <p>Here are some of my projects</p>
         <animated.div style={springProps} className="project-list"> {/* Apply spring to the list */}
@@ -43,7 +45,7 @@ function Projects() {
             </div>
           ))}
         </animated.div>
-      </div>
+      </animated.div>
     </section>
   );
 }

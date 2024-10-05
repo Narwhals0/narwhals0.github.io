@@ -1,0 +1,150 @@
+.contact {
+    padding: 60px 30px; /* Adequate padding for breathing space */
+    max-width: 800px; /* Limiting width for readability */
+    margin: 100px auto; /* Center align the content */
+    background-color: rgb(255, 255, 255); /* Light background for modern look */
+    color: #333333; /* Dark text for contrast */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.contact h1 {
+    font-size: 2.5rem; /* Larger font size for title */
+    margin-bottom: 20px; /* Space below title */
+    color: #007AFF; /* Accent color */
+    text-align: center; /* Center align title */
+}
+
+.contact p {
+    font-size: 1.125rem; /* Slightly larger font size */
+    line-height: 1.6; /* Increased line height for readability */
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.contact-cards {
+    display: flex; /* Use flexbox for card layout */
+    justify-content: space-between; /* Space out cards evenly */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 20px; /* Space between cards */
+    padding: 0 20px; /* Padding for the card container */
+}
+
+.contact-card {
+    background-color: #2C2A29; /* Twilight-themed background color for cards */
+    border-radius: 12px; /* Rounded corners for cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    padding: 20px; /* Inner padding for card content */
+    flex: 1 1 30%; /* Flexible width for cards */
+    min-width: 250px; /* Minimum width for cards */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease; /* Smooth transition effects */
+    text-align: center; /* Center align text within cards */
+}
+
+/* Ensure the anchor fills the card */
+.card-link {
+    display: block; /* Make the anchor a block element */
+    height: 100%; /* Full height of the card */
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Light Mode Hover Effect */
+.contact-card:hover {
+    background-color: #3a3836; /* Slightly lighter color on hover for twilight theme */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.contact-card a {
+    color: #ffffff; /* Light text for card links */
+}
+
+.contact-card a:hover {
+    color: #007AFF; /* Change color on hover */
+}
+
+.contact-card h2 {
+    font-size: 1.5rem; /* Font size for card titles */
+    margin: 10px 0; /* Space above and below titles */
+    color: #ffffff; /* Light color for card titles */
+}
+
+.contact-card p {
+    font-size: 1rem; /* Font size for card descriptions */
+    color: #e0e0e0; /* Softer color for descriptions for better contrast */
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 2rem; /* Size of the icons */
+    color: #007AFF; /* Icon color */
+    margin-bottom: 10px; /* Space below icons */
+}
+
+/* Dark Mode Styles */
+.dark-mode .contact {
+    background-color: #333; /* Dark background for dark mode */
+    color: rgb(255, 255, 255); /* Light text for better contrast in dark mode */
+}
+
+.dark-mode .contact h1 {
+    color: #61dafb; /* Light text for card links in dark mode */
+}
+
+.dark-mode .icon {
+    color: #61dafb; /* Lighter color for icons in dark mode */
+}
+
+.dark-mode .contact-card {
+    background-color: #444; /* Darker background for cards in dark mode */
+    color: rgb(255, 255, 255); /* Light text for card links in dark mode */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.dark-mode .contact-card:hover {
+    background-color: #555; /* Change card background color on hover in dark mode */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for depth */
+}
+
+.dark-mode .contact-card a {
+    color: rgb(255, 255, 255); /* Ensure links are white in dark mode */
+}
+
+.dark-mode .contact-card a:hover {
+    color: #61dafb; /* Change link color on hover in dark mode */
+}
+
+.dark-mode .contact h2 {
+    color: #ffffff; /* Lighter color for headings in dark mode */
+}
+
+.dark-mode .contact p {
+    color: #ffffff; /* Softer gray for readability in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 20px; /* Reduce padding on smaller screens */
+    }
+
+    .contact h1 {
+        font-size: 2rem; /* Adjust main title size for smaller screens */
+    }
+
+    .contact p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+
+    .contact-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center align cards */
+    }
+
+    .contact-card {
+        width: 100%; /* Full width for cards on smaller screens */
+    }
+}

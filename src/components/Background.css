@@ -9,4 +9,11 @@
   background: linear-gradient(135deg, #007bff, #8f94fb 75%); /* Dominant blue with subtle purple */
   pointer-events: none; /* Make sure canvas doesn't interfere with clicks */
   filter: blur(0.3px); /* Optional: Add a slight blur for elegance */
+  transition: background 0.5s ease; /* Smooth transition for dark mode */
+}
+
+/* Dark Mode Styles */
+.dark-mode .background {
+  background: linear-gradient(135deg, #000000, #4a4a4a 75%); /* Dark gradient for dark mode */
+  transition: background 0.5s ease;
 }
