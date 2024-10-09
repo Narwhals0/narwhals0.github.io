@@ -1,0 +1,117 @@
+.project-cap-container {
+    padding: 80px 40px; /* Increased padding for better space utilization */
+    max-width: 1000px; /* Maintain maximum width for readability */
+    margin: 150px auto; /* Centered with space at the top */
+    background-color: rgb(255, 255, 255); /* Clean background */
+    color: #333333; /* Dark text for contrast */
+    border-radius: 12px; /* Soft rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Classy font */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.card {
+    background-color: #2e2e2e; /* Dark gray background for cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 30px; /* Increased padding inside cards for better balance */
+    margin: 30px 0; /* Increased margin between cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+}
+
+.card h2 {
+    color: #007AFF; /* Blue color for card headings */
+    font-size: 1.75rem; /* Increased font size for better readability */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+.project-cap-container h1 {
+    font-size: 3rem; /* Increased title size for better visibility */
+    margin-bottom: 30px; /* Increased space below title */
+    margin-top: 20px; /* Increased top margin */
+    font-weight: 700; /* Bold title */
+    text-align: center; /* Centered */
+    color: #007AFF; /* Blue color */
+}
+
+.project-cap-container h2 {
+    font-size: 2.25rem; /* Increased section heading size */
+    margin-top: 20px; /* Increased top margin */
+    margin-bottom: 20px; /* Increased bottom margin */
+    font-weight: 600; /* Medium weight */
+    text-align: left; /* Left aligned */
+    color: #ffffff; /* White color for visibility */
+}
+
+.subtitle {
+    color: #333333; /* Dark color for subtitle text */
+    font-size: 1.5rem; /* Subtitle size */
+    text-align: center; /* Center align the subtitle */
+    margin-bottom: 20px; /* Increased bottom margin */
+}
+
+.project-cap-container h3 {
+    color: white; /* White color for subheadings */
+    font-size: 1.75rem; /* Adjusted size for subheadings */
+    margin-top: 15px; /* Added top margin for spacing */
+}
+
+.project-cap-container p {
+    font-size: 1.125rem; /* Paragraph text size */
+    line-height: 1.8; /* Improved line height for readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+    text-align: left; /* Left aligned */
+    color: white; /* White text color for better contrast */
+}
+
+.project-cap-container li {
+    color: white; /* White color for list items */
+    margin-bottom: 10px; /* Space below list items */
+}
+
+.project-cap-container img.project-image {
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Maximum width for images */
+    margin: 40px 0; /* Increased space around images */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.project-cap-container p:last-child {
+    margin-bottom: 0; /* No extra margin at the bottom */
+}
+
+/* Add some interactive hover effects */
+.card:hover {
+    background-color: #2e2e2ee1; /* Light background on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Dark Mode for the night owls */
+.dark-mode .project-cap-container {
+    background-color: #333; /* Dark background */
+    color: rgb(255, 255, 255); /* Light text for contrast */
+}
+
+.dark-mode .project-cap-container h1,
+.dark-mode .project-cap-container h2 {
+    color: #61dafb; /* Light headings */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-cap-container {
+        padding: 60px 30px; /* Adjust padding for smaller screens */
+    }
+
+    .project-cap-container h1 {
+        font-size: 2.5rem; /* Scale down title */
+    }
+
+    .project-cap-container h2 {
+        font-size: 2rem; /* Scale down subheadings */
+    }
+
+    .project-cap-container p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+        line-height: 1.5; /* Line height for mobile */
+    }
+}

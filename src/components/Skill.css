@@ -1,7 +1,7 @@
 .skills {
     padding: 60px 30px; /* Adequate padding for breathing space */
     max-width: 800px; /* Limiting width for readability */
-    margin: 150px auto; /* Center align the content with space from the header */
+    margin: 130px auto; /* Center align the content with space from the header */
     background-color: rgb(255, 255, 255); /* Light background for modern look */
     color: #f7f7f7; /* Dark text for better contrast */
     border-radius: 16px; /* Increased border radius for a softer look */
@@ -53,11 +53,31 @@
     font-size: 1.125rem; /* Slightly larger font size for list items */
     line-height: 1.8; /* Increased line height for readability */
     margin-bottom: 10px; /* Space below list items */
+    color: #ffffff;
 }
 
 .skill-card:hover {
     transform: translateY(-3px); /* Lift effect on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for depth */
+}
+
+.credly-badge {
+    margin: 30px 0; /* Margin around the badge section */
+    text-align: center; /* Center the content */
+}
+
+.badge-container {
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+   margin-right: 20px;/* Space between each badge container */
+    display: inline-block; /* Allows badges to sit next to each other if there's space */
+}
+
+.credly-badge h2 {
+    margin-bottom: 10px; /* Space between the heading and the first badge */
 }
 
 /* Dark Mode Styles */

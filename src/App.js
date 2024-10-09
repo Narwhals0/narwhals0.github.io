@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Skill from './components/Skill';
 import Contact from './components/Contact';
+import ProjectCap from './components/ProjectCap'; // Import the ProjectCap component
 
 
 const HomePage = () => {
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} /> {/* Correct path to /about */}
         <Route path='/skills' element={<Skill />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path="/ProjectCap" element={<ProjectCap />} /> {/* Add a route for the ProjectCap component */}
       </Routes>
     </Router>
   );

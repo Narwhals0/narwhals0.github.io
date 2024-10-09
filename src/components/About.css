@@ -1,76 +1,61 @@
 .about {
-  padding: 60px 30px; /* Adequate padding for breathing space */
-  max-width: 800px; /* Limiting width for readability */
-  margin: 150px auto; /* Center align the content with space from the header */
-  background-color: rgb(255, 255, 255); /* Light, semi-transparent background for a modern look */
-  color: #333333; /* Dark text for better contrast */
-  border-radius: 16px; /* Increased border radius for a softer look */
+  padding: 40px 20px; /* Adequate padding for spaciousness */
+  max-width: 800px; /* Max width for readability */
+  margin: 120px auto; /* Center the content */
+  background-color: #ffffff; /* White background for contrast */
+  color: #333333; /* Dark text for readability */
+  border-radius: 12px; /* Soft rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: 'Poppins', sans-serif; /* Consistent font family */
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  font-family: 'Poppins', sans-serif; /* Classy font */
 }
 
-.about h1 {
-  font-size: 2.5rem; /* Larger font size for the main title */
-  margin-bottom: 40px; /* Space below title */
-  margin-top: 5px;
-  font-weight: 700; /* Bold for emphasis */
-  text-align: center; /* Center align the title */
-  color: #007AFF; /* macOS-like accent color */
+h1 {
+  font-size: 2.5rem; /* Increased title size for better visibility */
+  margin-bottom: 20px; /* Space below title */
+  text-align: center; /* Centered */
+  color: #007AFF; /* Blue color */
 }
 
-.about h2 {
-  font-size: 1.75rem; /* Slightly larger for subheadings */
-  margin-top: 40px; /* Space above subheading */
-  margin-bottom: 10px; /* Space below subheading */
+h2 {
+  font-size: 2rem; /* Section heading size */
+  margin-top: 30px; /* Space above section heading */
+  margin-bottom: 15px; /* Space below section heading */
   font-weight: 600; /* Medium weight */
-  text-align: left; /* Left align the subheading */
-  color: #333333; /* Dark color for consistency */
+  color: #007AFF; /* Blue color for subheadings */
 }
 
-.about p {
-  font-size: 1.125rem; /* Slightly larger font size for paragraphs */
-  line-height: 1.8; /* Increased line height for readability */
-  margin-bottom: 15px; /* Space below paragraph */
-  text-align: left; /* Left align text */
+p {
+  font-size: 1.125rem; /* Paragraph text size */
+  line-height: 1.6; /* Improved line height for readability */
+  margin-bottom: 20px; /* Space below paragraphs */
 }
 
-.about p:last-child {
-  margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+ul {
+  margin-left: 20px; /* Indent for lists */
+  margin-bottom: 20px; /* Space below lists */
 }
 
-/* Additional styles for a more airy design */
-.about:hover {
-  background-color: rgba(255, 255, 255, 1); /* Brighter background on hover for interactivity */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover for depth */
+li {
+  margin-bottom: 10px; /* Space between list items */
+  color: #333333; /* Dark text color for contrast */
 }
 
-/* Dark Mode Styles */
-.dark-mode .about {
-  background-color: #333; /* Dark background for dark mode */
-  color: rgb(255, 255, 255); /* Light text for better contrast in dark mode */
-}
-
-.dark-mode .about h1,
-.dark-mode .about h2 {
-  color: #61dafb; /* Lighter color for headings in dark mode */
-}
-
-/* Responsive Design */
+/* Responsive design */
 @media (max-width: 768px) {
   .about {
-      padding: 40px 20px; /* Reduce padding on smaller screens */
+      padding: 30px 15px; /* Adjust padding for smaller screens */
   }
 
-  .about h1 {
-      font-size: 2rem; /* Adjust main title size for smaller screens */
+  h1 {
+      font-size: 2rem; /* Scale down title */
   }
 
-  .about h2 {
-      font-size: 1.5rem; /* Adjust subheading size for smaller screens */
+  h2 {
+      font-size: 1.5rem; /* Scale down section headings */
   }
 
-  .about p {
-      font-size: 1rem; /* Adjust paragraph size for smaller screens */
+  p {
+      font-size: 1rem; /* Adjust paragraph size for mobile */
+      line-height: 1.4; /* Line height for mobile */
   }
 }
